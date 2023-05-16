@@ -4,6 +4,8 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
+<br>
+<a href="{% url 'blog:post_list' %}">< Back</a>
 <h1>{{ post.title }}</h1>
 <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
 {{ post.body|markdown }}
